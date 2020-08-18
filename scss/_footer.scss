@@ -1,67 +1,60 @@
-/* Footer Area css
-============================================================================================ */
-.blog_version {
-	.footer_area {
-		background: #f9f9fd;
-		&:before {
-			content: none;
-		}
-	}
-}
-.footer_area {
-	padding: 120px 0;
-	position: relative;
-	&:before {
-		content: '';
-		position: absolute;
-		top: -200px;
-		left: 0px;
-		right: 0px;
-		bottom: 0px;
-		background: #f9f9fd;
-		z-index: -1;
-	}
-	@media (max-width: 1024px) {
-		padding: 60px 0;
-	}
-	.footer_logo {
-		text-align: center;
-		h4 {
-			font-size: 20px;
-			color: #000000;
-			margin-top: 35px;
-			text-transform: uppercase;
-		}
-	}
-	.footer_social {
-		text-align: center;
-		margin: 25px 0px 30px;
-		a {
-			padding: 0 20px;
-			i {
-				color: #788489;
-				font-size: 22px;
-				@include transition();
-				@media (max-width: 576px) {
-					font-size: 25px;
-				}
-				&:hover {
-					color: $primary-color2;
-				}
-			}
-		}
-	}
+/* :: 9.0 Footer CSS */
 
-	.footer_bottom {
-		text-align: center;
-		p {
-			margin-bottom: 0;
-		}
-		a {
-			color: $primary-color2;
-		}
-	}
-}
+.footer-content {
+    padding: 20px 0;
 
-/* End Footer Area css
-============================================================================================ */
+    .copywrite-text {
+        position: relative;
+        z-index: 1;
+
+        p {
+            margin-bottom: 0;
+            color: $heading;
+
+            @media #{$breakpoint-xs} {
+                font-size: 12px;
+            }
+
+            a {
+                color: $primary;
+                font-weight: 400;
+
+                @media #{$breakpoint-xs} {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .footer-logo {
+        a {
+            img {
+                @media #{$breakpoint-xs} {
+                    max-width: 50px;
+                }
+            }
+        }
+    }
+
+    .social-info {
+        a {
+            color: $heading;
+            font-size: 16px;
+            margin-right: 20px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            @media #{$breakpoint-xs} {
+                margin-right: 5px;
+                font-size: 12px;
+            }
+
+            &:hover,
+            &:focus {
+                color: $hover;
+            }
+        }
+    }
+}
